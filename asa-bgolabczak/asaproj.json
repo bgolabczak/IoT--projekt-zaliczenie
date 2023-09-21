@@ -1,0 +1,42 @@
+{
+    "name": "asa-bgolabczak",
+    "startFile": "Transformation.asaql",
+    "configurations": [
+        {
+            "filePath": "JobConfig.json",
+            "subType": "JobConfig"
+        },
+        {
+            "filePath": "Outputs/asa-out-aggreg-counts.json",
+            "subType": "Output"
+        },
+        {
+            "filePath": "Outputs/asa-out-emerg-stops.json",
+            "subType": "Output"
+        },
+        {
+            "filePath": "Outputs/asa-out-errors.json",
+            "subType": "Output"
+        },
+        {
+            "filePath": "Outputs/asa-out-proc-good-count.json",
+            "subType": "Output"
+        },
+        {
+            "filePath": "Outputs/asa-out-temp.json",
+            "subType": "Output"
+        },
+        {
+            "filePath": "Inputs/asa-in-dhyrenko.json",
+            "subType": "Input"
+        },
+        {
+            "filePath": "Outputs/asa-out-decrease-rate-queue.json",
+            "subType": "Output"
+        },
+        {
+            "filePath": "Outputs/asa-out-error-bus-queue.json",
+            "subType": "Output"
+        }
+    ]
+}

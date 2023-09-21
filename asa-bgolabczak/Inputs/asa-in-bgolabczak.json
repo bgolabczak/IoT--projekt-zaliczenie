@@ -1,0 +1,20 @@
+{
+    "Name": "asa-in-dhyrenko",
+    "Type": "Data Stream",
+    "DataSourceType": "IoT Hub",
+    "IoTHubProperties": {
+        "IotHubNamespace": "iot-bgolabczak-ul-standard",
+        "Endpoint": "messages/events",
+        "SharedAccessPolicyName": "iothubowner",
+        "SharedAccessPolicyKey": null,
+        "ConsumerGroupName": "$Default"
+    },
+    "DataSourceCredentialDomain": "cd03574f-9420-44dc-adc7-07414c59a40a.StreamAnalystics",
+    "Serialization": {
+        "Type": "Json",
+        "Encoding": "UTF8"
+    },
+    "PartitionKey": "",
+    "CompressionType": "None",
+    "ScriptType": "Input"
+}

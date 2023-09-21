@@ -1,0 +1,14 @@
+{"log_time":"2023-07-18T19:30:00.0000000Z","machine_id":"ns=2;s=Device 2","emergency_stop_count":null,"power_failure_count":3.0,"sensor_failure_count":null,"unknown_error_count":8.0}
+{"log_time":"2023-07-18T19:30:00.0000000Z","machine_id":"ns=2;s=Device 1","emergency_stop_count":null,"power_failure_count":7.0,"sensor_failure_count":3.0,"unknown_error_count":2.0}
+{"log_time":"2023-07-18T19:30:00.0000000Z","machine_id":"ns=2;s=Device 3","emergency_stop_count":null,"power_failure_count":3.0,"sensor_failure_count":null,"unknown_error_count":null}
+{"log_time":"2023-07-18T20:00:00.0000000Z","machine_id":"ns=2;s=Device 2","emergency_stop_count":null,"power_failure_count":14.0,"sensor_failure_count":null,"unknown_error_count":18.0}
+{"log_time":"2023-07-18T20:00:00.0000000Z","machine_id":"ns=2;s=Device 4","emergency_stop_count":null,"power_failure_count":null,"sensor_failure_count":null,"unknown_error_count":1.0}
+{"log_time":"2023-07-18T20:00:00.0000000Z","machine_id":"ns=2;s=Device 5","emergency_stop_count":null,"power_failure_count":null,"sensor_failure_count":1.0,"unknown_error_count":null}
+{"log_time":"2023-07-18T20:00:00.0000000Z","machine_id":"ns=2;s=Device 6","emergency_stop_count":null,"power_failure_count":2.0,"sensor_failure_count":null,"unknown_error_count":3.0}
+{"log_time":"2023-07-18T20:00:00.0000000Z","machine_id":"ns=2;s=Device 1","emergency_stop_count":null,"power_failure_count":1.0,"sensor_failure_count":null,"unknown_error_count":null}
+{"log_time":"2023-07-18T20:00:00.0000000Z","machine_id":"ns=2;s=Device 3","emergency_stop_count":null,"power_failure_count":null,"sensor_failure_count":null,"unknown_error_count":1.0}
+{"log_time":"2023-07-18T20:30:00.0000000Z","machine_id":"ns=2;s=Device 2","emergency_stop_count":null,"power_failure_count":2.0,"sensor_failure_count":null,"unknown_error_count":null}
+{"log_time":"2023-07-18T20:30:00.0000000Z","machine_id":"ns=2;s=Device 4","emergency_stop_count":null,"power_failure_count":8.0,"sensor_failure_count":null,"unknown_error_count":13.0}
+{"log_time":"2023-07-18T20:30:00.0000000Z","machine_id":"ns=2;s=Device 5","emergency_stop_count":null,"power_failure_count":null,"sensor_failure_count":null,"unknown_error_count":null}
+{"log_time":"2023-07-18T20:30:00.0000000Z","machine_id":"ns=2;s=Device 1","emergency_stop_count":null,"power_failure_count":15.0,"sensor_failure_count":1.0,"unknown_error_count":1.0}
+{"log_time":"2023-07-18T20:30:00.0000000Z","machine_id":"ns=2;s=Device 3","emergency_stop_count":null,"power_failure_count":null,"sensor_failure_count":null,"unknown_error_count":1.0}

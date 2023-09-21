@@ -1,0 +1,8 @@
+{"emergency_stop_time":"2023-07-18T19:15:00.0000000Z","machine_id":"ns=2;s=Device 2","error_sum":5.0}
+{"emergency_stop_time":"2023-07-18T19:15:00.0000000Z","machine_id":"ns=2;s=Device 1","error_sum":7.0}
+{"emergency_stop_time":"2023-07-18T19:30:00.0000000Z","machine_id":"ns=2;s=Device 2","error_sum":6.0}
+{"emergency_stop_time":"2023-07-18T19:30:00.0000000Z","machine_id":"ns=2;s=Device 1","error_sum":5.0}
+{"emergency_stop_time":"2023-07-18T19:45:00.0000000Z","machine_id":"ns=2;s=Device 6","error_sum":5.0}
+{"emergency_stop_time":"2023-07-18T20:00:00.0000000Z","machine_id":"ns=2;s=Device 2","error_sum":32.0}
+{"emergency_stop_time":"2023-07-18T20:15:00.0000000Z","machine_id":"ns=2;s=Device 4","error_sum":21.0}
+{"emergency_stop_time":"2023-07-18T20:30:00.0000000Z","machine_id":"ns=2;s=Device 1","error_sum":17.0}

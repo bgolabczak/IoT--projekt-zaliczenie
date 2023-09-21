@@ -1,0 +1,19 @@
+{
+    "Name": "asa-out-error-bus-queue",
+    "DataSourceType": "Service Bus Queue",
+    "ServiceBusQueueProperties": {
+        "ServiceBusNamespace": "serv-bus-iot-dhyrenko",
+        "QueueName": "errors-queue",
+        "SharedAccessPolicyName": "iothubroutes_WMII-IoT-group",
+        "SharedAccessPolicyKey": null,
+        "PropertyColumns": [],
+        "SystemPropertyColumns": {}
+    },
+    "DataSourceCredentialDomain": "ddbe5cd4-16c1-4715-aea1-55ae898d73a2.StreamAnalystics",
+    "Serialization": {
+        "Type": "Json",
+        "Encoding": "UTF8",
+        "Format": "LineSeparated"
+    },
+    "ScriptType": "Output"
+}

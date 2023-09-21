@@ -1,0 +1,27 @@
+{
+    "Name": "asa-out-emerg-stops",
+    "DataSourceType": "Blob Storage",
+    "BlobStorageProperties": {
+        "StorageAccounts": [
+            {
+                "AccountName": "storedhtest",
+                "AccountKey": null
+            }
+        ],
+        "Container": "asa-out-emergency-stops",
+        "PathPattern": "",
+        "DateFormat": "yyyy/MM/dd",
+        "TimeFormat": "HH",
+        "AuthenticationMode": "Msi",
+        "BlobWriteMode": "Append"
+    },
+    "DataSourceCredentialDomain": null,
+    "Serialization": {
+        "Type": "Json",
+        "Encoding": "UTF8",
+        "Format": "LineSeparated"
+    },
+    "MinimumRows": null,
+    "MaximumTime": null,
+    "ScriptType": "Output"
+}

@@ -1,0 +1,96 @@
+SELECT 
+    System.Timestamp() time,
+    deviceId
+INTO
+    [asa-out-decrease-rate-queue]
+FROM
+    [asa-in-dhyrenko]
+GROUP BY
+    deviceId,
+    TumblingWindow(minute, 15)
+HAVING
+    (MAX(good_count)*100)/(MAX(good_count)+MAX(bad_count)) < 90
+
+SELECT
+    System.Timestamp() emergency_stop_time,
+    deviceId,
+    SUM(COALESCE(emergency_stop,0)) + SUM(COALESCE(power_failure,0)) + SUM(COALESCE(sensor_failure,0)) + SUM(COALESCE(unknown,0)) as error_sum
+INTO
+    [asa-out-error-bus-queue]
+FROM
+    [asa-in-dhyrenko]
+GROUP BY
+    deviceId,
+    TumblingWindow(minute, 15)
+HAVING
+    error_sum > 3
+
+SELECT
+    System.Timestamp() emergency_stop_time,
+    machine_id,
+    SUM(COALESCE(emergency_stop,0)) + SUM(COALESCE(power_failure,0)) + SUM(COALESCE(sensor_failure,0)) + SUM(COALESCE(unknown,0)) as error_sum
+INTO
+    [asa-out-emerg-stops]
+FROM
+    [asa-in-dhyrenko]
+GROUP BY
+    machine_id,
+    TumblingWindow(minute, 15)
+HAVING
+    error_sum > 3
+
+SELECT
+    System.Timestamp() log_time,
+    machine_id,
+    MAX(temperature) as temperature_max,
+    MIN(temperature) as temperature_min,
+    AVG(temperature) as temperature_avg
+INTO
+    [asa-out-temp]
+FROM
+    [asa-in-dhyrenko]
+GROUP BY 
+    machine_id,
+    TumblingWindow(minute, 5)
+
+SELECT
+    System.Timestamp() log_time,
+    workorder_id,
+    MAX(good_count) as good_count_sum,
+    MAX(bad_count) as bad_count_sum
+INTO
+    [asa-out-aggreg-counts]
+FROM
+    [asa-in-dhyrenko]
+WHERE
+    workorder_id IS NOT NULL
+GROUP BY
+    workorder_id,
+    TumblingWindow(minute, 30)
+
+SELECT
+    System.Timestamp() log_time,
+    machine_id,
+    (MAX(good_count)*100)/(MAX(good_count)+MAX(bad_count)) as proc_of_good_production
+INTO
+    [asa-out-proc-good-count]
+FROM
+    [asa-in-dhyrenko]
+GROUP BY
+    machine_id,
+    TumblingWindow(minute, 15)
+
+SELECT
+    System.Timestamp() log_time,
+    machine_id,
+    SUM(emergency_stop) as emergency_stop_count,
+    SUM(power_failure) as power_failure_count,
+    SUM(sensor_failure) as sensor_failure_count,
+    SUM(unknown) as unknown_error_count
+INTO
+    [asa-out-errors]
+FROM
+    [asa-in-dhyrenko]
+GROUP BY
+    machine_id,
+    TumblingWindow(minute, 30)

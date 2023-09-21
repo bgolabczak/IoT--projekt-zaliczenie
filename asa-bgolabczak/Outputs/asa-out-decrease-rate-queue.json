@@ -1,0 +1,19 @@
+{
+    "Name": "asa-out-decrease-rate-queue",
+    "DataSourceType": "Service Bus Queue",
+    "ServiceBusQueueProperties": {
+        "ServiceBusNamespace": "serv-bus-iot-dhyrenko",
+        "QueueName": "decrease-rate-queue",
+        "SharedAccessPolicyName": "RootManageSharedAccessKey",
+        "SharedAccessPolicyKey": null,
+        "PropertyColumns": [],
+        "SystemPropertyColumns": {}
+    },
+    "DataSourceCredentialDomain": "9be91ad7-07b2-4dc2-9486-54918d20c4e3.StreamAnalystics",
+    "Serialization": {
+        "Type": "Json",
+        "Encoding": "UTF8",
+        "Format": "LineSeparated"
+    },
+    "ScriptType": "Output"
+}
